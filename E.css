@@ -202,7 +202,6 @@ h2 {
 .grid-one-content {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   height: 100vh;
 
@@ -227,10 +226,10 @@ h2 .grid-main-con {
   gap: var(--gap);
   counter-reset: grid;
 
+
 }
 
 .grid h3 {
-
   font-size: 3rem;
   position: relative;
   padding-left: 6rem;
@@ -275,6 +274,8 @@ table th {
 
 .contact-formu {
   grid-column: span 2;
+  
+
 }
 
 
@@ -287,16 +288,25 @@ table th {
 
 
 
+
 }
+
 
 .intro-img .img {
-  height: 30rem;
   padding-top: 2rem;
+  max-width: 100%;
+  height: 30rem;
+ 
+  
 }
 
-.form-group .full-width{
+.form-group .full-width {
   display: block;
   flex: 1 1 auto;
+}
+
+.form-group {
+  width: 50%;
 }
 
 .form-grid legend {
@@ -311,22 +321,20 @@ table th {
 }
 
 
-.full-width {
-  width: 100%;
-  flex: 1 1 100%;
-}
 
 
-.form-group input,
-.form-group textarea {
+
+.form-group input {
   border: none;
   background: var(--branco);
-  padding: 1.5rem 2rem;
+  padding: 1.6rem 2rem;
   width: 100%;
 
 
 
 }
+
+
 
 
 .form-group button {
@@ -356,19 +364,13 @@ table th {
   background-color: #f0f0f0;
   padding: 0.5rem;
   text-align: center;
-
-
-
-}
-
-textarea {
-  resize: none;
-}
+ 
+  }
 
 
 .footer p {
   padding-top: 2rem;
- 
+
 
 }
 
@@ -386,12 +388,21 @@ textarea {
   display: none;
 }
 
-@media screen and (max-width:720px) {
-  
-body{
-  min-width: 495px;
+@media (max-width:640px){
+
+
+ 
+h1,h2{
+  font-size: 4rem;
+}
+div .heit{
+  padding-top: 5rem;
+  font-size: 4rem;
 }
 
+  html {
+    font-size: 50%; 
+  }
 
   .intro-content,
   .grid {
@@ -430,7 +441,7 @@ body{
     position: fixed;
     z-index: 2;
     top: 2rem;
-    right: 2rem;
+    right: 1rem;
     background: var(--color);
     color: var(--branco);
     font-size: 3rem;
@@ -452,5 +463,5 @@ body{
   .menu-spacing1 {
     display: none;
   }
-  
+
 }
